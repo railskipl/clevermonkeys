@@ -1,0 +1,316 @@
+pt:
+  # formatos de data e hora
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d de %B"
+      long: "%d de %B de %Y"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Sun, Mon, Tue, Wed, Thu, Fri, Sat]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order: [:day, :month, :year]
+
+  time:
+    formats:
+      default: "%A, %d de %B de %Y, %H:%M h"
+      short: "%d/%m, %H:%M h"
+      long: "%A, %d de %B de %Y, %H:%M h"
+    am: ''
+    pm: ''
+
+  # distancia do tempo em palavras
+  datetime:
+    distance_in_words:
+      half_a_minute: 'half a minute'
+      less_than_x_seconds:
+        one: 'less than 1 second'
+        other: 'less than %{count} seconds'
+
+      x_seconds:
+        one: '1 second'
+        other: '%{count} seconds'
+
+      less_than_x_minutes:
+        one: 'less than one minute'
+        other: 'under %{count} minutes'
+
+      x_minutes:
+        one: '1 minute'
+        other: '%{count} minute'
+
+      about_x_hours:
+        one: 'approximately 1 hour'
+        other: 'approximately %{count} hours'
+
+      x_days:
+        one: '1 day'
+        other: '%{count} day'
+
+      about_x_months:
+        one: 'approximately 1 month'
+        other: 'approximately %{count} months'
+
+      x_months:
+        one: '1 month'
+        other: '%{count} months'
+
+      about_x_years:
+        one: 'approximately 1 year'
+        other: 'approximately %{count} years'
+
+      over_x_years:
+        one: 'more than 1 year'
+        other: 'but %{count} years'
+
+      almost_x_years:
+        one: 'almost 1 year'
+        other: 'almost %{count} years'
+
+    prompts:
+      year:   "Year"
+      month:  "Month"
+      day:    "Day"
+      hour:   "Hour"
+      minute: "Minute"
+      second: "Second"
+
+  # numeros
+  number:
+    format:
+      precision: 3
+      separator: ','
+      delimiter: '.'
+    currency:
+      format:
+        unit: 'R$'
+        precision: 2
+        format: '%u %n'
+        separator: ','
+        delimiter: '.'
+    percentage:
+      format:
+        delimiter: '.'
+    precision:
+      format:
+        delimiter: '.'
+    human:
+      format:
+        precision: 2
+        delimiter: '.'
+        significant: true
+        strip_unsignificant_zeros: true
+      # number_to_human_size()
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      # number_to_human()
+      # new in rails 3: please add to other locales
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "thousand"
+          million:
+            one: million
+            other: million
+          billion:
+            one: billion
+            other: billion
+          trillion:
+            one: trillion
+            other: trillion
+          quadrillion:
+            one: quadrillion
+            other: quadrillion
+
+  # Usado no Array.to_sentence
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " e "
+      last_word_connector: " e "
+
+  # ActiveRecord
+  activerecord:
+    models:
+      ticket:
+        one: "Ticket"
+        other: "Tickets"
+    attributes:
+      ticket:
+        issue_description: "Description of pending"
+        subject: "subject"
+        di_os_version: "DI do operationalized System"
+        di_database_info: "nformation Database DI"
+        rts_database_info: "Information Database RTS"
+        rts_versions_id: "Versions of RTS"
+        language_id: ""
+    errors:
+      template:
+        header:
+          one: "Unable to write {{model}}: 1 error"
+          other: "Unable to write {{model}} {{count}}: errors."
+        body: "Please check (s) following field (s) (s):"
+      messages:
+        inclusion: "is not included in the list"
+        exclusion: "not available"
+        invalid: "is not valid"
+        confirmation: "is not in accordance with the confirmation"
+        accepted: "must be accepted"
+        empty: "can not be empty"
+        blank: "can not be blank"
+        too_long: "is very long (up: %{count} characters)"
+        too_short: "is very short (minimum: %{count} characters)"
+        wrong_length: "not have the expected size (%{count} characters)"
+        taken: "is already in use"
+        not_a_number: "is a number"
+        not_an_integer: "is not an integer"
+        greater_than: "must be greater than %{count}"
+        greater_than_or_equal_to: "must be greater than or equal to %{count}"
+        equal_to: "must equal %{count}"
+        less_than: "must be less than %{count}"
+        less_than_or_equal_to: "must be less than or equal to %{count}"
+        odd: "must be odd"
+        even: "must be even"
+        record_invalid: "Validation failed: %{errors}"
+        ticket:
+          invalid_di_server_version: "Server version of ID is invalid"
+          invalid_di_device_version: "Version of the device ID is invalid"
+
+  views:
+    global:
+      buttons:
+        save: "Save"
+        cancel: "Cancel"
+        submit: "Submit"
+        back: "Back"
+        save_ticket_changes: "Save changes to the ticket"
+      menu:
+        tickets: "Tickets"
+        languages: "Languages"
+        user_group: "User Groups"
+        companies: "Companies"
+        users: "Users"
+        global_configuration: "Global Configurations"
+    public:
+      send_mail: "Send Mail"
+      printer_friendly: "Printer Friendly"
+      helpfull_window:
+        thanks: "Thanks"
+        how_be_more_helpfull: "How can we make this more helpfull for you?"
+    ticket:
+      all:
+        ticket: "TICKET"
+        title: "All Tickets"
+        new: "New ticket"
+        number: "Number"
+        subject: "Subject"
+        assignee: "Assignee"
+        di_version: "DI Version"
+        rts_version: "RTS Version"
+        open_date: "Open Date"
+        created_by: "Created by"
+        at: "at"
+        assigned_to: "Assigned to"
+        open_tickets: "Open tickets"
+        assigned_tickets: "Assigned tickets"
+        closed_tickets: "Closed tickets"
+      all_staff:
+        title: "All Tickets"
+        new: "New ticket"
+        number: "Number"
+        subject: "Subject"
+        assignee: "Assignee"
+        di_version: "DI Version"
+        rts_version: "RTS Version"
+        open_date: "Open Date"
+        set_priority: "Set priority to selected tickets"
+        assing_to_user: "Assing selected ticket to user"
+        get_ticket: "GET TICKET"
+      public_window:
+        new: "New Ticket"
+        all: "see all tickets"
+        number: "New Ticket"
+        assing_to_me: "Tickets assigned to me"
+      new:
+        title: "New Ticket"
+        subject: "Subject"
+        priority: "Priority"
+        di_edition: "DI Edition"
+        ticket_type: "Ticket Type"
+        client: "Reporter"
+        server:
+          title: "Server"
+          di_version: "DI Version"
+          rts_version: "RTS Version"
+          di_os_server_version: "DI Server O.S. Version"
+          di_database_info: "DI Database Info"
+          rts_database_info : "RTS Database Info"
+        device:
+          title: "Client"
+          di_version: "DI Version"
+          device_model: "Device Model"
+          device_os_version: "Device O.S. Version"
+          di_user_language: "DI User Language"
+        issue_information:
+          title: "Issue Information"
+          describe_the_issue_below: "Describe the issue below"
+          replicate_error_message_below: "Replicate Error Message below"
+          steps_to_reproduce: "Steps to reproduce"
+          remote_support_instructions: "Remote Support Instructions"
+          aditional_notes: "Additional Notes"
+          status: "Status"
+        files:
+          title: "Files"
+          add_another_file: "Add another file"
+          remove_file: "Remove"
+        validate:
+          message: "DI Versions can`t be blank"
+      show:
+        files:
+          add_files_to_this_ticket: "Add files to this ticket"
+          uplad_description: "You can upload the log files, screenshots or any other files that might help support."
+        comments:
+          title: "Comments"
+          add_comment: "Add comment"
+          new_comment: "New comment"
+          subject: "Subject"
+          message: "Message"
+          add_another_file: "Add another file"
+        work_log:
+          title: "Work Log"
+          btn: "Log Work"
+          window_title: "New log work"
+          time_spend: "Time spent"
+          time_spend_description: " An estimate of how much time you have spent working. <br />
+The format this is *w *d *h *m (representing weeks, days, hours and minutes - where * can be any number)
+<br /><br />
+Examples: 4d, 5h, 30m, 60m and 3w "
+          start_date: "Start Date (d/m/y)"
+          work_description: "Work Description"
+          time_worked: "Time Worked"
+      status_generator:
+        closed: "Closed"
+        cancelled: "Cancelled"
+        resolved: "Resolved"
+        reopened: "Reopened"
+        working: "Working"
+        assigned: "Assigned"
+        forwarded: "Forwarded"
+        open: "Open"
+      send_mail:
+        hello: "Hello"
+        your_ticket: "your ticket"
+        has_a_new_comment: "has a new comment"
+        subject: "Subject"
+        message: "Message"
+        ticket_issue: "Ticket issue description"

@@ -1,4 +1,4 @@
-source :gemcutter
+source :rubygems
 
 gem "rails", "~> 2.3.8" 
 gem 'pg'
@@ -8,4 +8,3 @@ gem "will_paginate", "~> 2.3.12"
 gem "composite_primary_keys", "~> 2.3.5.1"
 gem "rufus-scheduler", "~> 2.0.6"
 gem "chronic", "~> 0.2.3"
-gem "hoe", "~> 3.0.8"

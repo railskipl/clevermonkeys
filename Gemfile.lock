@@ -46,7 +46,6 @@ PLATFORMS
 DEPENDENCIES
   chronic (~> 0.2.3)
   composite_primary_keys (~> 2.3.5.1)
-  hoe (~> 3.0.8)
   paperclip (~> 2.3.5)
   pg
   rails (~> 2.3.8)
